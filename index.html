@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sérum Facial Revitalizante</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f3eb;
+            color: #4a2e2b;
+        }
+
+        header {
+            background-color: #8b5e3c;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 24px;
+        }
+
+        nav {
+            background-color: #d7bba8;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: #4a2e2b;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #b08968;
+            color: white;
+        }
+
+        section {
+            display: flex;
+            align-items: center;
+            padding: 40px 60px;
+        }
+
+        #mak {
+            background-color: #f1e7db;
+            color: white;
+            display: flex; /* Mostra a seção MAK COSMETICS inicialmente */
+            font-size: 4em; /* Tamanho grande da fonte */
+            font-weight: bold;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Garantir que ocupe toda a altura da tela */
+        }
+
+        #home, #sobre, #cadastro, #sucesso {
+            display: none; /* Todas as outras seções começam ocultas */
+        }
+
+        h2 {
+            color: #8b5e3c;
+        }
+
+        footer {
+            background-color: #4a2e2b;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .text-container {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .image-container {
+            flex: 1;
+            text-align: right;
+        }
+
+        .image-container img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .info {
+            background-color: #d7bba8;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .info p {
+            font-size: 18px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #b08968;
+            border-radius: 5px;
+            background-color: #f8f3eb;
+        }
+
+        form input[type="submit"] {
+            background-color: #8b5e3c;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #a67a5c;
+        }
+
+        .success-container {
+            background-color: #d7bba8;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .success-container h1 {
+            color: #8b5e3c;
+        }
+
+        .success-container p {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .success-container a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #8b5e3c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .success-container a:hover {
+            background-color: #a67a5c;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Sérum Facial Revitalizante - Beleza Natural</h1>
+    </header>
+
+    <nav>
+        <a href="#mak" onclick="mostrarAba('mak')">MAK COSMETICS</a>
+        <a href="#home" onclick="mostrarAba('home')">Home</a>
+        <a href="#sobre" onclick="mostrarAba('sobre')">Sobre</a>
+        <a href="#cadastro" onclick="mostrarAba('cadastro')">Cadastro</a>
+    </nav>
+
+    <!-- Seção MAK COSMETICS -->
+    <section id="mak">
+        <div>MAK COSMETICS</div>
+    </section>
+
+    <!-- Seção Home -->
+    <section id="home">
+        <div class="text-container">
+            <h2>Transforme sua Pele com o Nosso Sérum Facial</h2>
+            <p>Nosso Sérum Facial Revitalizante combina ingredientes de alta qualidade e origem natural, cuidadosamente selecionados para proporcionar uma experiência única de cuidado com a pele. 
+               Este sérum hidrata profundamente, rejuvenesce e oferece uma sensação de frescor e suavidade desde o primeiro uso.</p>
+            
+            <div class="info">
+                <h3>Benefícios do Sérum Facial</h3>
+                <ul>
+                    <li>Hidratação intensa e duradoura</li>
+                    <li>Redução de linhas finas e rugas</li>
+                    <li>Brilho natural e luminosidade para todos os tipos de pele</li>
+                    <li>Ingredientes naturais e seguros</li>
+                    <li>Redução de manchas e não causa irritações</li>
+                </ul>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="https://blog.dermage.com.br/wp-content/uploads/2022/12/mulherpassandoserum.jpeg" alt="Imagem do sérum facial">
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre">
+        <div class="text-container">
+            <h2>Sobre o Produto</h2>
+            <p>Nosso sérum foi criado com a missão de diminuir machas, e irritações na pele propocionando uma otima hidratação e protegendo sua pele de acnes. Com ingredientes como ácido hialurônico, Soro fisiologico, mel e alecrim, este produto oferece resultados visíveis em pouco tempo, mantendo a pele saudável e bonita com uma formula simples e unica.</p>
+
+            <div class="info">
+                <h3>O que Faz o Sérum Ser Diferente?</h3>
+                <p>Nossa fórmula é desenvolvida sem o uso de produtos químicos agressivos. Priorizamos o uso de ingredientes naturais e seguros, garantindo que o sérum seja adequado para todos os tipos de pele, inclusive as mais sensíveis.</p>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="https://storage.googleapis.com/beyoung-blog/2023/03/header-o-que-e-acido-hialuronico-beyoung-1.jpg" alt="Imagem do produto">
+        </div>
+    </section>
+
+    <!-- Seção Cadastro -->
+    <section id="cadastro">
+        <div class="text-container">
+            <h2>Cadastre-se para Receber Ofertas Exclusivas</h2>
+            <p>Preencha o formulário abaixo para receber novidades e promoções especiais diretamente no seu e-mail.</p>
+            
+            <form id="cadastroForm" action="#" method="post" onsubmit="return mostrarSucesso()">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+
+                <input type="submit" value="Cadastrar">
+            </form>
+        </div>
+        <div class="image-container">
+            <img src="https://www.lojaadcos.com.br/belezacomsaude/app/uploads/2023/10/serum-facial-hidratante.jpg" alt="Imagem do cadastro">
+        </div>
+    </section>
+
+    <!-- Seção Sucesso -->
+    <section id="sucesso">
+        <div class="success-container">
+            <h1>Cadastro Concluído com Sucesso!</h1>
+            <p>Obrigado por se cadastrar. Em breve, você receberá nossas ofertas e novidades exclusivas no seu e-mail.</p>
+            <a href="#" onclick="mostrarAba('home')">Voltar para a página inicial</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Sérum Facial Revitalizante. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Mostra a aba selecionada ao clicar
+        function mostrarAba(aba) {
+            document.getElementById('mak').style.display = 'none';
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('sobre').style.display = 'none';
+            document.getElementById('cadastro').style.display = 'none';
+            document.getElementById('sucesso').style.display = 'none';
+
+            document.getElementById(aba).style.display = 'flex';
+        }
+
+        // Exibe a seção de sucesso ao cadastrar
+        function mostrarSucesso() {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('sobre').style.display = 'none';
+            document.getElementById('cadastro').style.display = 'none';
+
+            document.getElementById('sucesso').style.display = 'flex';
+
+            return false;
+        }
+
+        // Exibe a seção MAK COSMETICS ao carregar a página
+        window.onload = function() {
+            mostrarAba('mak');
+        }
+    </script>
+
+</body>
+</html>
